@@ -1,0 +1,26 @@
+[package]
+name = "tackle"
+version = "1.0.0"
+description = "Linux cli package simplifier (pipewire, ...)"
+authors = ["NoloxoYT"]
+license = "MIT"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+crossterm = "0.29.0"
+dashmap = "6.0"
+parking_lot = "0.12.5"
+ratatui = "0.30.2"
+reqwest = { version = "0.13.5", features = ["blocking"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+sudo = "0.6.0"
+tui-popup = "0.7.7"
+uzers = "0.12.2"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true
