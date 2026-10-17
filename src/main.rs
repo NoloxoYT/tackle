@@ -4,6 +4,8 @@ mod packages;
 mod tui;
 use anyhow::bail;
 use sudo;
+
+use crate::packages::load;
 fn main() -> anyhow::Result<()> {
     if sudo::check() != sudo::RunningAs::Root {
         let elevation = sudo::escalate_if_needed();
@@ -11,6 +13,7 @@ fn main() -> anyhow::Result<()> {
             bail!("Failed to run as sudo")
         }
     }
+    load::get();
     ratatui::run(tui::start)?;
     Ok(())
 }
