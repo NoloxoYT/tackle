@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "packages": [
+    "containers",
+    "desktop",
+    "development",
+    "editors",
+    "essentials",
+    "fonts",
+    "media",
+    "networking",
+    "pipewire"
+  ]
+}

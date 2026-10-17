@@ -1,0 +1,83 @@
+{
+  "name": "fonts",
+  "parameters": [
+    {
+      "param_name": "font pack",
+      "param_type": {
+        "Choice": {
+          "choices": [
+            "dejavu",
+            "liberation",
+            "noto",
+            "jetbrains-mono"
+          ],
+          "command": [
+            {
+              "base": "pacman -S --noconfirm ttf-dejavu",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm ttf-liberation",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm noto-fonts",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm ttf-jetbrains-mono",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "install noto color emoji",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm noto-fonts-emoji",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install font awesome",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm ttf-font-awesome",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install powerline fonts",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm powerline-fonts",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    }
+  ]
+}

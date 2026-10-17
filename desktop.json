@@ -1,0 +1,128 @@
+{
+  "name": "desktop",
+  "parameters": [
+    {
+      "param_name": "desktop environment",
+      "param_type": {
+        "Choice": {
+          "choices": [
+            "gnome",
+            "kde",
+            "xfce",
+            "i3"
+          ],
+          "command": [
+            {
+              "base": "pacman -S --noconfirm gnome",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm plasma-meta",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm xfce4 xfce4-goodies",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm i3-wm i3status dmenu",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "display manager",
+      "param_type": {
+        "Choice": {
+          "choices": [
+            "gdm",
+            "sddm",
+            "lightdm"
+          ],
+          "command": [
+            {
+              "base": "pacman -S --noconfirm gdm",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm sddm",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm lightdm",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "install xorg",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm xorg",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install wayland",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm wayland",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install xdg-desktop-portal",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm xdg-desktop-portal",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install gnome-tweaks",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm gnome-tweaks",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    }
+  ]
+}

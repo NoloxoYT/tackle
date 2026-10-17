@@ -1,0 +1,142 @@
+{
+  "name": "development",
+  "parameters": [
+    {
+      "param_name": "language runtime",
+      "param_type": {
+        "Choice": {
+          "choices": [
+            "rust",
+            "nodejs",
+            "python3",
+            "golang",
+            "openjdk"
+          ],
+          "command": [
+            {
+              "base": "pacman -S --noconfirm rust",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm nodejs npm",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm python python-pip",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm go",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm jdk-openjdk",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "install base-devel",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm base-devel",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install cmake",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm cmake",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install clang",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm clang",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install gdb",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm gdb",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install make",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm make",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install pkgconf",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm pkgconf",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install shellcheck",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm shellcheck",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    }
+  ]
+}

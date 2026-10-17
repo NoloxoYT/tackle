@@ -1,0 +1,95 @@
+{
+  "name": "containers",
+  "parameters": [
+    {
+      "param_name": "container engine",
+      "param_type": {
+        "Choice": {
+          "choices": [
+            "docker",
+            "podman"
+          ],
+          "command": [
+            {
+              "base": "pacman -S --noconfirm docker",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm podman",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "install docker compose",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm docker-compose",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install buildah",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm buildah",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install skopeo",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm skopeo",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install distrobox",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm distrobox",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install docker-buildx",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm docker-buildx",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    }
+  ]
+}

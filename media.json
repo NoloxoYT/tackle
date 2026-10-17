@@ -1,0 +1,95 @@
+{
+  "name": "media",
+  "parameters": [
+    {
+      "param_name": "media player",
+      "param_type": {
+        "Choice": {
+          "choices": [
+            "mpv",
+            "vlc"
+          ],
+          "command": [
+            {
+              "base": "pacman -S --noconfirm mpv",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm vlc",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "install ffmpeg",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm ffmpeg",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install gimp",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm gimp",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install obs-studio",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm obs-studio",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install imagemagick",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm imagemagick",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install yt-dlp",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm yt-dlp",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    }
+  ]
+}

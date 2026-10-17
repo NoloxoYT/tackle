@@ -1,0 +1,50 @@
+{
+  "name": "editors",
+  "parameters": [
+    {
+      "param_name": "editor",
+      "param_type": {
+        "Choice": {
+          "choices": [
+            "vim",
+            "nano",
+            "emacs"
+          ],
+          "command": [
+            {
+              "base": "pacman -S --noconfirm vim",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm nano",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm emacs",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "install vim plugins",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm vim-plug",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "name": "pipewire",
+  "parameters": [
+    {
+      "param_name": "audio server",
+      "param_type": {
+        "Choice": {
+          "choices": [
+            "pipewire",
+            "pulseaudio",
+            "alsa"
+          ],
+          "command": [
+            {
+              "base": "pacman -S --noconfirm pipewire",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm pulseaudio",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm alsa-utils",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "install wireplumber",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm wireplumber",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install pipewire-pulse",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm pipewire-pulse",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install pipewire-alsa",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm pipewire-alsa",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install pipewire-jack",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm pipewire-jack",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install pavucontrol",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm pavucontrol",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install easyeffects",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm easyeffects",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install helvum",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm helvum",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    }
+  ]
+}

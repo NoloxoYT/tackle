@@ -1,0 +1,63 @@
+{
+  "name": "essentials",
+  "parameters": [
+    {
+      "param_name": "install curl",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm curl",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install git",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm git",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "preferred shell",
+      "param_type": {
+        "Choice": {
+          "choices": [
+            "bash",
+            "zsh",
+            "fish"
+          ],
+          "command": [
+            {
+              "base": "pacman -S --noconfirm bash",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm zsh",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm fish",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

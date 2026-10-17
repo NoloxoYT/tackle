@@ -1,0 +1,147 @@
+{
+  "name": "networking",
+  "parameters": [
+    {
+      "param_name": "network manager",
+      "param_type": {
+        "Choice": {
+          "choices": [
+            "networkmanager",
+            "systemd-networkd",
+            "connman"
+          ],
+          "command": [
+            {
+              "base": "pacman -S --noconfirm networkmanager",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm systemd",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm connman",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "firewall",
+      "param_type": {
+        "Choice": {
+          "choices": [
+            "ufw",
+            "firewalld",
+            "nftables"
+          ],
+          "command": [
+            {
+              "base": "pacman -S --noconfirm ufw",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm firewalld",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            },
+            {
+              "base": "pacman -S --noconfirm nftables",
+              "need_additional_input": false,
+              "additional_input_description": "",
+              "show_output": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "param_name": "install openssh",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm openssh",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install wget",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm wget",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install nmap",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm nmap",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install net-tools",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm net-tools",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install bind",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm bind",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    },
+    {
+      "param_name": "install tcpdump",
+      "param_type": {
+        "Bool": {
+          "command": {
+            "base": "pacman -S --noconfirm tcpdump",
+            "need_additional_input": false,
+            "additional_input_description": "",
+            "show_output": false
+          }
+        }
+      }
+    }
+  ]
+}
